@@ -1,20 +1,14 @@
 import {
-  Box,
   Center,
   Flex,
   Icon,
   IconButton,
-  Spacer,
-  Text,
-  useBreakpoint,
   useBreakpointValue,
-  Wrap,
-  WrapItem,
 } from "@chakra-ui/react";
 
 import { Logo } from "./Logo";
 import { useSiderbarDrawer } from "../../contexts/SideBarDrawerContext";
-import { RiMenuLine } from "react-icons/ri";
+import { RiMenuLine, RiArrowLeftSLine } from "react-icons/ri";
 
 export function Header() {
   const { onOpen } = useSiderbarDrawer();
@@ -45,7 +39,16 @@ export function Header() {
         ></IconButton>
       )}
 
-      <Center w="100%" h="20">
+      <IconButton
+        aria-label="Open navigation"
+        icon={<Icon as={RiArrowLeftSLine} color="gray.600" />}
+        fontSize="32"
+        variant="unstyled"
+        onClick={onOpen}
+        mb={8}
+        ml="150px"
+      ></IconButton>
+      <Center w="100%" h="100px">
         <Logo />
       </Center>
     </Flex>
