@@ -1,4 +1,5 @@
 import {
+  Button,
   Center,
   Flex,
   Icon,
@@ -6,9 +7,12 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
+import { NavLink } from "../Sidebar/NavLink";
+
 import { Logo } from "./Logo";
 import { useSiderbarDrawer } from "../../contexts/SideBarDrawerContext";
 import { RiMenuLine, RiArrowLeftSLine } from "react-icons/ri";
+import Link from "next/link";
 
 export function Header() {
   const { onOpen } = useSiderbarDrawer();
@@ -39,16 +43,9 @@ export function Header() {
         ></IconButton>
       )}
 
-      <IconButton
-        aria-label="Open navigation"
-        icon={<Icon as={RiArrowLeftSLine} color="gray.600" />}
-        fontSize="32"
-        variant="unstyled"
-        onClick={onOpen}
-        mb={8}
-        ml="150px"
-      ></IconButton>
-      <Center w="100%" h="100px">
+      <NavLink icon={RiArrowLeftSLine} href="/home"></NavLink>
+
+      <Center w="100%" mr="130px" h="100px">
         <Logo />
       </Center>
     </Flex>

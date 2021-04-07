@@ -21,19 +21,16 @@ export function Logo() {
       bgPosition="center"
       bgRepeat="no-repeat"
     >
-      <Box px={24} mx={10} py={8} justify="center" display={{ md: "flex" }}>
-        <Box pr="140px">
-          <Text
-            mt="190px"
-            ml={10}
-            fontWeight="bold"
-            fontSize="4xl"
-            letterSpacing="wide"
-            color="gray.950"
-          >
-            Europa
-          </Text>
-        </Box>        
+      <Box ml={100} py={8} justify="center" display={{ md: "flex" }}>
+        <Text
+          mt="190px"
+          fontWeight="bold"
+          fontSize="4xl"
+          letterSpacing="wide"
+          color="gray.950"
+        >
+          Europa
+        </Text>
       </Box>
     </Box>
   );

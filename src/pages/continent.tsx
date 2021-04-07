@@ -16,6 +16,7 @@ import {
   GridItem,
   Stack,
   Badge,
+  Icon,
 } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 
@@ -32,6 +33,7 @@ import SwiperCore, {
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Description } from "../components/Continent/Description";
+import { RiMenuLine } from "react-icons/ri";
 
 // install Swiper modules
 SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
@@ -63,40 +65,40 @@ export default function Home() {
         <Description />
       </Box>
       <Box w="100%" align="center">
-        <Stack h="700px" w="1160px">
+        <Stack px={8} h="700px" w="1160px">
           <Text
             fontWeight="medium"
             fontSize="36px"
             color="gray.600"
             align="left"
+            mb={4}
           >
             Cidades +100
           </Text>
 
           <SimpleGrid columns={4} spacing={10}>
             <Box maxW="sm" borderRadius="lg" overflow="hidden" height="279px">
-              <Image src="/foto01.png" h="173px" alt="foto01.png" />
+              <Image src="/londres.png" h="173px" alt="Londres" />
 
               <Box
                 p="6"
                 borderBottom="1px"
                 borderLeft="1px"
                 borderRight="1px"
-                borderColor={`gray.900`}
+                borderColor={`gray.899`}
                 h="106px"
-                w="98.5%"
+                w="100%"
                 borderBottomLeftRadius="lg"
                 borderBottomRightRadius="lg"
               >
                 <SimpleGrid columns={2} spacingX="2px" spacingY="20px">
-                  <Box bg="tomato">
+                  <Box>
                     <Box d="flex" alignItems="baseline">
                       <Box
                         color="gray.500"
                         fontWeight="semibold"
                         letterSpacing="wide"
-                        fontSize="xs"
-                        textTransform="uppercase"
+                        fontSize="20px"
                         ml="2"
                       >
                         Londres
@@ -105,10 +107,10 @@ export default function Home() {
                     <Box d="flex" alignItems="baseline">
                       <Box
                         color="gray.500"
-                        fontWeight="semibold"
+                        fontWeight="medium"
                         letterSpacing="wide"
                         fontSize="xs"
-                        textTransform="uppercase"
+                        fontFamily="Barlow"
                         ml="2"
                         mt="2"
                       >
@@ -116,77 +118,253 @@ export default function Home() {
                       </Box>
                     </Box>
                   </Box>
-                  <Box bg="tomato">
-                    <Box
-                      align="center"
-                      justify="left"
-                      color="gray.500"
-                      fontWeight="semibold"
-                    >
-                      <Image
-                        src="/foto01.png"
-                        ml="0"
-                        h="13px"
-                        alt="foto01.png"
-                      />
+
+                  <Wrap spacing="30px" align="center">
+                    <WrapItem>
+                      <Center ml="60px" h="70px">
+                        <Image
+                          src="/ellipse.png"
+                          ml="0"
+                          h="32px"
+                          alt="foto01.png"
+                        />
+                      </Center>
+                    </WrapItem>
+                  </Wrap>
+                </SimpleGrid>
+              </Box>
+            </Box>
+            <Box maxW="sm" borderRadius="lg" overflow="hidden" height="279px">
+              <Image src="/paris.png" h="173px" alt="Paris" />
+
+              <Box
+                p="6"
+                borderBottom="1px"
+                borderLeft="1px"
+                borderRight="1px"
+                borderColor={`gray.899`}
+                h="106px"
+                w="100%"
+                borderBottomLeftRadius="lg"
+                borderBottomRightRadius="lg"
+              >
+                <SimpleGrid columns={2} spacingX="2px" spacingY="20px">
+                  <Box>
+                    <Box d="flex" alignItems="baseline">
+                      <Box
+                        color="gray.500"
+                        fontWeight="semibold"
+                        letterSpacing="wide"
+                        fontSize="20px"
+                        ml="2"
+                      >
+                        Paries
+                      </Box>
+                    </Box>
+                    <Box d="flex" alignItems="baseline">
+                      <Box
+                        color="gray.500"
+                        fontWeight="medium"
+                        letterSpacing="wide"
+                        fontSize="xs"
+                        fontFamily="Barlow"
+                        ml="2"
+                        mt="2"
+                      >
+                        França
+                      </Box>
                     </Box>
                   </Box>
+
+                  <Wrap spacing="30px" align="center">
+                    <WrapItem>
+                      <Center ml="60px" h="70px">
+                        <Image
+                          src="/franca_bandeira.png"
+                          ml="0"
+                          h="32px"
+                          alt="Bandeira Franca"
+                        />
+                      </Center>
+                    </WrapItem>
+                  </Wrap>
+                </SimpleGrid>
+              </Box>
+            </Box>
+            <Box maxW="sm" borderRadius="lg" overflow="hidden" height="279px">
+              <Image src="/roma.png" h="173px" alt="Roma" />
+
+              <Box
+                p="6"
+                borderBottom="1px"
+                borderLeft="1px"
+                borderRight="1px"
+                borderColor={`gray.899`}
+                h="106px"
+                w="100%"
+                borderBottomLeftRadius="lg"
+                borderBottomRightRadius="lg"
+              >
+                <SimpleGrid columns={2} spacingX="2px" spacingY="20px">
+                  <Box>
+                    <Box d="flex" alignItems="baseline">
+                      <Box
+                        color="gray.500"
+                        fontWeight="semibold"
+                        letterSpacing="wide"
+                        fontSize="20px"
+                        ml="2"
+                      >
+                        Roma
+                      </Box>
+                    </Box>
+                    <Box d="flex" alignItems="baseline">
+                      <Box
+                        color="gray.500"
+                        fontWeight="medium"
+                        letterSpacing="wide"
+                        fontSize="xs"
+                        fontFamily="Barlow"
+                        ml="2"
+                        mt="2"
+                      >
+                        Itália
+                      </Box>
+                    </Box>
+                  </Box>
+
+                  <Wrap spacing="30px" align="center">
+                    <WrapItem>
+                      <Center ml="60px" h="70px">
+                        <Image
+                          src="/italia_bandeira.png"
+                          ml="0"
+                          h="32px"
+                          alt="Italia Bandeira"
+                        />
+                      </Center>
+                    </WrapItem>
+                  </Wrap>
+                </SimpleGrid>
+              </Box>
+            </Box>
+            <Box maxW="sm" borderRadius="lg" overflow="hidden" height="279px">
+              <Image src="/praga.png" h="173px" alt="Praga" />
+
+              <Box
+                p="6"
+                borderBottom="1px"
+                borderLeft="1px"
+                borderRight="1px"
+                borderColor={`gray.899`}
+                h="106px"
+                w="100%"
+                borderBottomLeftRadius="lg"
+                borderBottomRightRadius="lg"
+              >
+                <SimpleGrid columns={2} spacingX="2px" spacingY="20px">
+                  <Box>
+                    <Box d="flex" alignItems="baseline">
+                      <Box
+                        color="gray.500"
+                        fontWeight="semibold"
+                        letterSpacing="wide"
+                        fontSize="20px"
+                        ml="2"
+                      >
+                        Praga
+                      </Box>
+                    </Box>
+                    <Box d="flex" alignItems="baseline" w="122px">
+                      <Text
+                        color="gray.500"
+                        fontWeight="medium"
+                        letterSpacing="wide"
+                        fontSize="xs"
+                        fontFamily="Barlow"
+                        mt="2"
+                        ml={2}
+                      >
+                        República Tcheca
+                      </Text>
+                    </Box>
+                  </Box>
+
+                  <Wrap>
+                    <WrapItem>
+                      <Center ml="60px" h="70px">
+                        <Image
+                          src="/republica_tcheca_bandeira.png"
+                          ml="0"
+                          h="32px"
+                          alt="Republica Tcheca"
+                        />
+                      </Center>
+                    </WrapItem>
+                  </Wrap>
+                </SimpleGrid>
+              </Box>
+            </Box>
+            <Box maxW="sm" borderRadius="lg" overflow="hidden" height="279px">
+              <Image src="/amsterda.png" h="173px" alt="Amsterdã" />
+
+              <Box
+                p="6"
+                borderBottom="1px"
+                borderLeft="1px"
+                borderRight="1px"
+                borderColor={`gray.899`}
+                h="106px"
+                w="100%"
+                borderBottomLeftRadius="lg"
+                borderBottomRightRadius="lg"
+              >
+                <SimpleGrid columns={2} spacingX="2px" spacingY="20px">
+                  <Box>
+                    <Box d="flex" alignItems="baseline">
+                      <Box
+                        color="gray.500"
+                        fontWeight="semibold"
+                        letterSpacing="wide"
+                        fontSize="20px"
+                        ml="2"
+                      >
+                        Amsterdã
+                      </Box>
+                    </Box>
+                    <Box d="flex" alignItems="baseline">
+                      <Box
+                        color="gray.500"
+                        fontWeight="medium"
+                        letterSpacing="wide"
+                        fontSize="xs"
+                        fontFamily="Barlow"
+                        ml="2"
+                        mt="2"
+                      >
+                        Olanda
+                      </Box>
+                    </Box>
+                  </Box>
+
+                  <Wrap spacing="30px" align="center">
+                    <WrapItem>
+                      <Center ml="60px" h="70px">
+                        <Image
+                          src="/olanda_bandeira.png"
+                          ml="0"
+                          h="32px"
+                          alt="olanda_bandeira.png"
+                        />
+                      </Center>
+                    </WrapItem>
+                  </Wrap>
                 </SimpleGrid>
               </Box>
             </Box>
           </SimpleGrid>
         </Stack>
       </Box>
-      <Center w="100%" h="450">
-        <Box w="100%" px="105px" h="450">
-          <Center w="100%" h="450" position="relative">
-            <Grid
-              h="100px"
-              templateRows="repeat(2)"
-              templateColumns="repeat(1)"
-              mt="0px"
-              position="absolute"
-              spacing="10px"
-              zIndex="9"
-            >
-              <GridItem>
-                <Text
-                  fontFamily="Poppins"
-                  fontWeight="bold"
-                  fontSize="48px"
-                  color="gray.950"
-                  align="center"
-                >
-                  Europa
-                </Text>
-              </GridItem>
-              <GridItem>
-                <Text
-                  fontFamily="Poppins"
-                  fontWeight="bold"
-                  fontSize="24px"
-                  color="gray.450"
-                  align="center"
-                >
-                  Ocontinente mais antigo.
-                </Text>
-              </GridItem>
-            </Grid>
-
-            <Swiper
-              navigation
-              spaceBetween={50}
-              slidesPerView={1}
-              pagination={{ clickable: false }}
-              scrollbar={{ draggable: false }}
-              onSlideChange={() => console.log("slide change")}
-              autoplay={{ delay: 3000 }}
-            >
-              {addItem()}
-            </Swiper>
-          </Center>
-        </Box>
-      </Center>
     </SimpleGrid>
   );
 }

@@ -1,15 +1,17 @@
 import { extendTheme } from "@chakra-ui/react";
+import { lighten } from "polished";
 
 export const theme = extendTheme({
   colors: {
     gray: {
       "950": "#F5F8FA",
       "900": "#FFBA08",
+      "899": lighten(0.4, "#FFBA08"),
       "850": "#1D1D1D",
       "700": "#000000",
       "600": "#47585B",
       "500": "#999999",
-      "450":"#DADADA",
+      "450": "#DADADA",
 
       "400": "#797D9A",
       "300": "#9699B0",
@@ -19,8 +21,8 @@ export const theme = extendTheme({
     },
   },
   fonts: {
-    heading: "Roboto",
-    body: "Roboto",
+    heading: "Poppins",
+    body: "Poppins",
   },
   styles: {
     global: {

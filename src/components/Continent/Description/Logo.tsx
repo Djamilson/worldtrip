@@ -10,17 +10,17 @@ import {
   StatLabel,
   StatNumber,
   Center,
+  Icon,
+  HStack,
+  StatGroup,
+  StatHelpText,
+  StatArrow,
 } from "@chakra-ui/react";
-
+import { RiInformationLine } from "react-icons/ri";
 
 export function Logo() {
   return (
-    <Stack
-      direction="row"
-      h="250px"
-      p={4}
-      mt="80px"
-    >
+    <Stack direction="row" h="250px" p={4} mt="80px">
       <Text
         w="600px"
         h="211px"
@@ -35,54 +35,71 @@ export function Logo() {
         divide-se da Ásia a leste pela divisória de águas dos montes Urais, o
         rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.
       </Text>
-      <Box
-        w="490px"
-        h="211px"
-        justify="center"
-        spacing={3}
-        color="gray.600"
-        align={["center"]}
-      >
-        <Center w="100%" h="211px">
-          <Stat
-            w={{ base: "80%", md: "40%" }}
-            align={["center", "center", "flex-start", "flex-start"]}
-          >
-            <StatNumber
-              fontFamily="Poppins"
-              fontSize="48px"
-              fontWeight="semibold"
-              color="gray.900"
-            >
-              50
-            </StatNumber>
-            <StatLabel>Países</StatLabel>
-          </Stat>
 
-          <Stat>
-            <StatNumber
-              fontFamily="Poppins"
-              fontSize="48px"
-              fontWeight="semibold"
-              color="gray.900"
-            >
-              60
-            </StatNumber>
-            <StatLabel>Línguas</StatLabel>
-          </Stat>
-          <Stat>
-            <StatNumber
-              fontFamily="Poppins"
-              fontSize="48px"
-              fontWeight="semibold"
-              color="gray.900"
-            >
-              27
-            </StatNumber>
-            <StatLabel>Cidades +100</StatLabel>
-          </Stat>
-        </Center>
-      </Box>
+      <Center h="211px" w="490px">
+        <StatGroup spacing={10}>
+          <Box w="90px" mr={6}>
+            <Stat>
+              <StatNumber
+                fontFamily="Poppins"
+                fontSize="48px"
+                fontWeight="semibold"
+                color="gray.900"
+              >
+                <Center h="80px">50</Center>
+              </StatNumber>
+              <StatLabel
+                fontFamily="Poppins"
+                fontWeight="semibold"
+                fontSize="24px"
+              >
+                <Center w="100%"> Países </Center>
+              </StatLabel>
+            </Stat>
+          </Box>
+          <Box w="100px">
+            <Stat>
+              <StatNumber
+                fontFamily="Poppins"
+                fontSize="48px"
+                fontWeight="semibold"
+                color="gray.900"
+              >
+                <Center h="80px">60</Center>
+              </StatNumber>
+              <StatLabel
+                fontFamily="Poppins"
+                fontWeight="semibold"
+                fontSize="24px"
+              >
+                <Center w="100%">Línguas </Center>
+              </StatLabel>
+            </Stat>
+          </Box>
+          <Box ml={6}>
+            <Stat w="190px">
+              <StatNumber
+                fontFamily="Poppins"
+                fontSize="48px"
+                fontWeight="semibold"
+                color="gray.900"
+              >
+                <Center h="80px">27</Center>
+              </StatNumber>
+              <StatLabel
+                fontFamily="Poppins"
+                fontWeight="semibold"
+                fontSize="24px"
+              >
+                <Center w="100%">
+                  <Text>Cidades +100</Text>
+                  <Icon as={RiInformationLine} ml={2} fontSize={16} />
+                </Center>
+              </StatLabel>
+            </Stat>
+          </Box>
+        </StatGroup>
+      </Center>
     </Stack>
   );
 }
