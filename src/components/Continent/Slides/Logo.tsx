@@ -21,7 +21,7 @@ export function Logo() {
       bgPosition="center"
       bgRepeat="no-repeat"
     >
-      <Box ml={100} py={8} justify="center" display={{ md: "flex" }}>
+      <Box ml={110} py={8} justify="center" display={{ md: "flex" }}>
         <Text
           mt="190px"
           fontWeight="bold"

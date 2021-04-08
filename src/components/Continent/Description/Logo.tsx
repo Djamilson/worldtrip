@@ -10,11 +10,9 @@ import {
   StatLabel,
   StatNumber,
   Center,
-  Icon,
-  HStack,
+  Icon,  
   StatGroup,
-  StatHelpText,
-  StatArrow,
+  
 } from "@chakra-ui/react";
 import { RiInformationLine } from "react-icons/ri";
 
@@ -22,6 +20,7 @@ export function Logo() {
   return (
     <Stack direction="row" h="250px" p={4} mt="80px">
       <Text
+        ml={6}       
         w="600px"
         h="211px"
         justifyContent="flex-start"

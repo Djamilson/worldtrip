@@ -64,7 +64,7 @@ export default function Home() {
         <Description />
       </Box>
       <Box w="100%" align="center">
-        <Stack px={8} h="700px" w="1160px">
+        <Stack px={12} h="700px" w="1160px">
           <Text
             fontWeight="medium"
             fontSize="36px"
