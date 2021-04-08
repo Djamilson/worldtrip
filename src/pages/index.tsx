@@ -1,29 +1,16 @@
 import {
   Box,
   Center,
-  Flex,
   SimpleGrid,
   Text,
-  Wrap,
-  WrapItem,
-  Slider,
-  SliderTrack,
-  SliderFilledTrack,
-  SliderThumb,
   Image,
-  HStack,
   Grid,
   GridItem,
 } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 
-import dynamic from "next/dynamic";
-const Carousel = dynamic(() => import("@brainhubeu/react-carousel"), {
-  ssr: false,
-});
-
-import { Slides } from "../components/Slides";
-import { Itens } from "../components/Itens";
+import { SectionBanner } from "../components/SectionBanner";
+import { SectionItens } from "../components/SectionItens";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -41,10 +28,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
 
 export default function Home() {
-  const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
-  const [firstSwiper, setFirstSwiper] = useState(null);
-  const [secondSwiper, setSecondSwiper] = useState(null);
-
   const addItem = () =>
     Array.from(Array(5)).map((el, i) => (
       <Box justify="center" w="100%">
@@ -65,10 +48,10 @@ export default function Home() {
         <Header />
       </Box>
       <Box height="342px">
-        <Slides />
+        <SectionBanner />
       </Box>
       <Box height="342px">
-        <Itens />
+        <SectionItens />
       </Box>
       <Box height="100px">
         <Center h="0px">

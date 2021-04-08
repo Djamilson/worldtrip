@@ -1,31 +1,20 @@
 import {
   Box,
   Center,
-  Flex,
   SimpleGrid,
   Text,
-  Wrap,
-  WrapItem,
-  Slider,
-  SliderTrack,
-  SliderFilledTrack,
-  SliderThumb,
   Image,
-  HStack,
   Grid,
   GridItem,
 } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 
-import dynamic from "next/dynamic";
-const Carousel = dynamic(() => import("@brainhubeu/react-carousel"), {
-  ssr: false,
-});
+import { SectionBanner } from "../components/SectionBanner";
+import { SectionItens } from "../components/SectionItens";
 
-import { Slides } from "../components/Slides";
-import { Itens } from "../components/Itens";
 
-import { useEffect, useRef, useState } from "react";
+// install Swiper modules
+SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
 
 import SwiperCore, {
   Navigation,
@@ -41,10 +30,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
 
 export default function Home() {
-  const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
-  const [firstSwiper, setFirstSwiper] = useState(null);
-  const [secondSwiper, setSecondSwiper] = useState(null);
-
   const addItem = () =>
     Array.from(Array(5)).map((el, i) => (
       <Box justify="center" w="100%">
@@ -60,15 +45,15 @@ export default function Home() {
     ));
 
   return (
-    <SimpleGrid columns={1} spacingX="40px" mb="8">
+    <SimpleGrid columns={1} spacingX="40px">
       <Box height="100px">
         <Header />
       </Box>
-      <Box height="342px">
-        <Slides />
+      <Box h="368.21px">
+        <SectionBanner />
       </Box>
       <Box height="342px">
-        <Itens />
+        <SectionItens />
       </Box>
       <Box height="100px">
         <Center h="0px">
@@ -98,7 +83,7 @@ export default function Home() {
             <Grid
               h="100px"
               templateRows="repeat(2)"
-              templateColumns="repeat(1)"              
+              templateColumns="repeat(1)"
               mt="0px"
               position="absolute"
               spacing="10px"
@@ -123,7 +108,7 @@ export default function Home() {
                   color="gray.450"
                   align="center"
                 >
-                  Ocontinente mais antigo.
+                  O continente mais antigo.
                 </Text>
               </GridItem>
             </Grid>

@@ -21,7 +21,6 @@ import {
 import { Header } from "../components/Header";
 
 import { Slides } from "../components/Continent/Slides";
-import { Itens } from "../components/Itens";
 
 import SwiperCore, {
   Navigation,
