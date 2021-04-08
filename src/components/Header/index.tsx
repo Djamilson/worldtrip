@@ -22,15 +22,7 @@ export function Header() {
   });
 
   return (
-    <Flex
-      as="header"
-      w="100%"
-      maxWidth={1440}
-      h="100px"
-      px="6"
-      align="center"    
-      
-    >
+    <Flex as="header" w="100%" maxWidth={1440} h="100px" px="6" align="center">
       <Center w="100%" h="100px">
         {!isWideVersion && (
           <IconButton
@@ -45,7 +37,7 @@ export function Header() {
 
         <NavLink icon={RiArrowLeftSLine} href="/home"></NavLink>
 
-        <Center w="100%" mr="130px" h="100px">
+        <Center w="100%" h="100px">
           <Logo />
         </Center>
       </Center>
