@@ -26,7 +26,7 @@ export function Slides() {
 
   return (
     <Flex
-      as="header"
+      as="section"
       w="100%"
       maxWidth={1440}
       h="36"
@@ -34,7 +34,7 @@ export function Slides() {
       px="0"
       align="center"
     >
-      <Center w="100%" h="20" bg="gray.900">
+      <Center w="100%"  bg="gray.900">
         <Logo />
       </Center>
     </Flex>
